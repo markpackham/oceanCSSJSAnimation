@@ -66,8 +66,13 @@ async function setupTrash() {
 function createTrash(icon) {
   const img = document.createElement("img");
   const top = randomNumberBetween(0, 50);
+  // size is based on how near or far an item is to give perspective
+  const size = top / 5 + 1;
+  img.style.width = `${size}vmin`;
+  img.style.height = `${size}vmin`;
   img.src = `/imgs/${icon}.svg`;
   img.style.top = `${top}vh`;
+  img.style.left = `${randomNumberBetween(0, 100)}vw`;
   trashContainer.appendChild(img);
 }
 
