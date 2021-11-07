@@ -74,6 +74,17 @@ body {
   animation: bob 2s ease-in-out infinite alternate;
 }
 
+/* bob up and down in water animation */
+@keyframes bob {
+  from {
+    transform: rotate(var(--rotation)) translateY(1vh);
+  }
+
+  to {
+    transform: rotate(calc(var(--rotation)+10deg));
+  }
+}
+
 /*
   Below code from Paulina Hetman
   https://codepen.io/pehaa/pen/yLVeLNg
